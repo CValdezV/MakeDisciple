@@ -7,36 +7,56 @@
     tools:context=".TableOfContents">
 
     <LinearLayout
-        android:layout_width="369dp"
-        android:layout_height="495dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/button"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button1" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button2" />
+            <Button
+                android:id="@+id/BookButton"
+                style="@android:style/Widget.Button"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:text="Book" />
 
-        <Button
-            android:id="@+id/button3"
+            <Button
+                android:id="@+id/LogButton"
+                style="@android:style/Widget.Button.Small"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:text="Log" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button3" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/NoteButton"
+                style="@android:style/Widget.Button"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:text="Notes" />
+
+            <Button
+                android:id="@+id/AboutButton"
+                style="@android:style/Widget.Button"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:text="About" />
+        </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
