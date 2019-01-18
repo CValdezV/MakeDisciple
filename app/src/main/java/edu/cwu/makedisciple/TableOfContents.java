@@ -13,11 +13,34 @@ public class TableOfContents extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.table_of_contents);
 
+        //About button intent
         Button aboutButton = (Button) findViewById(R.id.AboutButton);
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(TableOfContents.this,About.class));
+            }
+        });
+        //Book button intent
+        Button bookButton = (Button) findViewById(R.id.BookButton);
+        bookButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(TableOfContents.this,BookFrame.class));
+            }
+        });
+        Button logBook = (Button) findViewById(R.id.LogButton);
+        logBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(TableOfContents.this,CalendarLog.class));
+            }
+        });
+        Button noteButton = (Button) findViewById(R.id.NoteButton);
+        noteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(TableOfContents.this,NoteTaking.class));
             }
         });
     }
