@@ -16,7 +16,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".About"></activity>
+        <activity
+            android:name=".About"
+            android:parentActivityName=".TableOfContents">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TableOfContents" />
+        </activity>
+        <activity
+            android:name=".BookFrame"
+            android:parentActivityName=".TableOfContents">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TableOfContents" />
+        </activity>
+        <activity
+            android:name=".CalendarLog"
+            android:parentActivityName=".TableOfContents">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TableOfContents" />
+        </activity>
+        <activity android:name=".NoteTaking"
+            android:parentActivityName=".TableOfContents">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TableOfContents"/>
+        </activity>
     </application>
 
 </manifest>
