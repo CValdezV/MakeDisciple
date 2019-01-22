@@ -29,11 +29,11 @@ public class TableOfContents extends AppCompatActivity {
                 startActivity(new Intent(TableOfContents.this,BookFrame.class));
             }
         });
-        Button logBook = (Button) findViewById(R.id.LogButton);
+        Button logBook = (Button) findViewById(R.id.CalendarButton);
         logBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(TableOfContents.this,CalendarLog.class));
+                startActivity(new Intent(TableOfContents.this, Calendar.class));
             }
         });
         Button noteButton = (Button) findViewById(R.id.NoteButton);
