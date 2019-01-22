@@ -44,7 +44,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".TableOfContents" />
         </activity>
-        <activity android:name=".Abbreviations"></activity>
+        <activity android:name=".Abbreviations"
+            android:parentActivityName=".BookFrame">
+            <meta-data
+                android:name="anndroid.support.PARENT_ACTIVITY"
+                android:value=".BookFrame"/>
+        </activity>
     </application>
 
 </manifest>
