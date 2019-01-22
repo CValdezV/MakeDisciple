@@ -29,12 +29,12 @@
                 android:text="Book" />
 
             <Button
-                android:id="@+id/LogButton"
+                android:id="@+id/CalendarButton"
                 style="@android:style/Widget.Button.Small"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Log" />
+                android:text="Calendar" />
         </LinearLayout>
 
         <LinearLayout

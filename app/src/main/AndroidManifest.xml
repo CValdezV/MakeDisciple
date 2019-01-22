@@ -31,7 +31,7 @@
                 android:value=".TableOfContents" />
         </activity>
         <activity
-            android:name=".CalendarLog"
+            android:name=".Calendar"
             android:parentActivityName=".TableOfContents">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
