@@ -37,12 +37,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".TableOfContents" />
         </activity>
-        <activity android:name=".NoteTaking"
+        <activity
+            android:name=".NoteTaking"
             android:parentActivityName=".TableOfContents">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".TableOfContents"/>
+                android:value=".TableOfContents" />
         </activity>
+        <activity android:name=".Abbreviations"></activity>
     </application>
 
 </manifest>
