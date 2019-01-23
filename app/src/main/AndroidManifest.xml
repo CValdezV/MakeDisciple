@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Introduction"></activity>
         <activity android:name=".TableOfContents">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,11 +45,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".TableOfContents" />
         </activity>
-        <activity android:name=".Abbreviations"
+        <activity
+            android:name=".Abbreviations"
             android:parentActivityName=".BookFrame">
             <meta-data
                 android:name="anndroid.support.PARENT_ACTIVITY"
-                android:value=".BookFrame"/>
+                android:value=".BookFrame" />
         </activity>
     </application>
 
