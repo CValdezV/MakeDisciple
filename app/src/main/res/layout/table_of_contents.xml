@@ -6,14 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".TableOfContents">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Make Disciple"
+        app:titleTextColor="@android:color/background_light" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:orientation="vertical"
+        android:padding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        app:layout_constraintVertical_bias="0.606">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,13 +45,6 @@
                 android:layout_weight="1"
                 android:text="Book" />
 
-            <Button
-                android:id="@+id/CalendarButton"
-                style="@android:style/Widget.Button.Small"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_weight="1"
-                android:text="Calendar" />
         </LinearLayout>
 
         <LinearLayout
@@ -50,13 +60,20 @@
                 android:layout_weight="1"
                 android:text="Notes" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
             <Button
-                android:id="@+id/AboutButton"
-                style="@android:style/Widget.Button"
+                android:id="@+id/CalendarButton"
+                style="@android:style/Widget.Button.Small"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="About" />
+                android:text="Calendar" />
         </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
