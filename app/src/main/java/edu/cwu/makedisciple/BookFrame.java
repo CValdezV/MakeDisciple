@@ -31,5 +31,11 @@ public class BookFrame extends AppCompatActivity {
             }
         });
 
+        Button introButton = (Button) findViewById(R.id.IntroButton);
+        introButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(BookFrame.this,Introduction.class));
+            }
+        });
     }
 }
