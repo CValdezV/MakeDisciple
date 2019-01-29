@@ -19,7 +19,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="60dp"
         android:ems="10"
-        android:hint="date"
+        android:hint="Date"
         android:inputType="date"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
