@@ -6,19 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".TableOfContents">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary"
-        android:elevation="4dp"
-
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:title="Make Disciple"
-        app:titleTextColor="@android:color/background_light" />
+ <include layout="@layout/tool_bar"/>
 
     <LinearLayout
         android:layout_width="match_parent"

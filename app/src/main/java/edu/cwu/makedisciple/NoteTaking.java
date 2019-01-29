@@ -14,6 +14,7 @@ public class NoteTaking extends AppCompatActivity {
 
         //ToolBar setup
         Toolbar bar = (Toolbar) findViewById(R.id.my_toolbar);
+        bar.setTitle("Notes");
         setSupportActionBar(bar);
         //Actions on the Bar itself
         ActionBar ab = getSupportActionBar();
