@@ -17,11 +17,13 @@ public class BookFrame extends AppCompatActivity {
 
         //Toolbar setup
         Toolbar bar = (Toolbar)findViewById(R.id.my_toolbar);
+        bar.setTitle("Book");
         setSupportActionBar(bar);
         //Actions on the Bar itself
         ActionBar ab = getSupportActionBar();
 
         ab.setDisplayHomeAsUpEnabled(true);
+
         //Intent to the abbreviations
         Button abbreviationButton = (Button) findViewById(R.id.AbbButton);
         abbreviationButton.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +35,7 @@ public class BookFrame extends AppCompatActivity {
 
         Button introButton = (Button) findViewById(R.id.IntroButton);
         introButton.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
                 startActivity(new Intent(BookFrame.this,Introduction.class));
             }

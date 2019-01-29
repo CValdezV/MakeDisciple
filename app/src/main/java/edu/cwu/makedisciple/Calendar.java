@@ -15,6 +15,7 @@ public class Calendar extends AppCompatActivity {
 
         //Toolbar setup
         Toolbar bar = (Toolbar)findViewById(R.id.my_toolbar);
+        bar.setTitle("Calendar");
         setSupportActionBar(bar);
         //Actions on the Bar itself
         ActionBar ab = getSupportActionBar();

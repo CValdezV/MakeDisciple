@@ -14,7 +14,9 @@ public class About extends AppCompatActivity {
 
         //Toolbar setup
         Toolbar bar = (Toolbar)findViewById(R.id.my_toolbar);
+        bar.setTitle("About");
         setSupportActionBar(bar);
+
         //Actions on the Bar itself
         ActionBar ab = getSupportActionBar();
 

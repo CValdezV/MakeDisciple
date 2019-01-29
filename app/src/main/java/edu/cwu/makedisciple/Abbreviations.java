@@ -15,6 +15,7 @@ public class Abbreviations extends AppCompatActivity {
         //Toolbar setup
         Toolbar bar = (Toolbar)findViewById(R.id.my_toolbar);
         setSupportActionBar(bar);
+        bar.setTitle("Abbreviations");
         //Actions on the Bar itself
         ActionBar ab = getSupportActionBar();
 

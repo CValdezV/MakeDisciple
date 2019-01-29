@@ -6,19 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".About">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary"
-        android:elevation="4dp"
+ <include layout="@layout/tool_bar"/>
 
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:title="About"
-        app:titleTextColor="@android:color/background_light" />
 
     <ScrollView
         android:layout_width="395dp"
@@ -70,5 +59,6 @@
 
         </LinearLayout>
     </ScrollView>
+
 
 </android.support.constraint.ConstraintLayout>
