@@ -17,7 +17,7 @@ public class BookFrame extends AppCompatActivity {
 
         //Toolbar setup
         Toolbar bar = (Toolbar)findViewById(R.id.my_toolbar);
-        bar.setTitle("Book");
+        bar.setTitle("Chapters");
         setSupportActionBar(bar);
         //Actions on the Bar itself
         ActionBar ab = getSupportActionBar();
