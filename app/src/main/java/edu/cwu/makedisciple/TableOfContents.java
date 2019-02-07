@@ -21,48 +21,8 @@ public class TableOfContents extends AppCompatActivity {
         setSupportActionBar(bar);
 
 
-        //Book button intent
-        Button bookButton = (Button) findViewById(R.id.BookButton);
-        bookButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(TableOfContents.this,BookFrame.class));
-            }
-        });
-        Button logBook = (Button) findViewById(R.id.CalendarButton);
-        logBook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(TableOfContents.this, Calendar.class));
-            }
-        });
-        Button noteButton = (Button) findViewById(R.id.NoteButton);
-        noteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(TableOfContents.this,NoteTaking.class));
-            }
-        });
-    }
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu,menu);
-        return true;
 
-    }
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_new_content_about:
-                // User chose the "Settings" item, show the app settings UI...
-                Intent intent = new Intent(TableOfContents.this,About.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                return true;
 
-            default:
-                // If we got here, the user's action was not recognized.
-                // Invoke the superclass to handle it.
-                return super.onOptionsItemSelected(item);
 
-        }
     }
 }
