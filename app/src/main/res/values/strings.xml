@@ -15,4 +15,11 @@
     <string name="about1">\nMichael Mowry is the Director of Chi Alpha Christian Fellowship at Central Washington University. He serves on the Executive Committee overseeing the training of future campus ministers (Campus Ministers in Training) for Chi Alpha USA. Interns from Central are leading on 12 campuses stateside, and have served on 9 overseas. Michael pioneered the Chi Alpha ministry at the University of Missouri- Columbia, and along with his wife, Carol, founded and administrated The Ellensburg Christian School. He also helps coordinate the Perspectives on the World Christian Movement classes in Ellensburg. He and Carol have three grown sons. Michael holds a B.A. in Education at Western Washington University, and an M.A. in Theological Studies at Regent College, Vancouver, Canada.\n</string>
     <string name="about2">For more information, or to order books in bulk for your campus, please visit xacentral.com/DMMD or email Michael@xacentral.com.\n</string>
     <string name="about3">This app was made possible through the Central Washington University Department of Computer Science. It was developed by Jesse Calvert, Carlos Valdez-Valdivia, Andres Pena, Brad Ehrmann, and Jeremy Rodney.</string>
+    <string name="title_activity_drawer_main">DrawerMainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 </resources>
