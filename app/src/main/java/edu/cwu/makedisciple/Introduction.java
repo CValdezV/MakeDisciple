@@ -27,7 +27,7 @@ public class Introduction extends AppCompatActivity {
         ab.setDisplayHomeAsUpEnabled(true);
 
         //database call to get string
-        content = db.getContent(2);
+        
 
         String intro = getResources().getString(R.string.intro1);
         TextView tv = (TextView) findViewById(R.id.textView);
