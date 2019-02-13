@@ -10,15 +10,10 @@ import android.widget.TextView;
 
 import java.io.IOException;
 
-import edu.cwu.makedisciple.Database.DatabaseHelper;
-import edu.cwu.makedisciple.Database.TextContent;
-
 public class Introduction extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
 
 
 
@@ -41,4 +36,5 @@ public class Introduction extends AppCompatActivity {
 
 
     }
+
 }
