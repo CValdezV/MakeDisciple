@@ -2,8 +2,7 @@ package edu.cwu.makedisciple;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,12 +13,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
-import edu.cwu.makedisciple.Database.TextContent;
+import edu.cwu.makedisciple.Database.DatabaseAccess;
 
 public class DrawerMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    public TextView result_address;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,23 +29,9 @@ public class DrawerMainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
 
-        // Calendar log intent
-        Button logBook = (Button) findViewById(R.id.CalendarButton);
-        logBook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(DrawerMainActivity.this, Calendar.class));
-            }
-        });
 
-        //Note taking intent
-        Button noteButton = (Button) findViewById(R.id.NoteButton);
-        noteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(DrawerMainActivity.this,NoteTaking.class));
-            }
-        });
+
+
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -102,17 +90,34 @@ public class DrawerMainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+         result_address= findViewById(R.id.displayText);
 
             //abbreviations page link
         if (id == R.id.abbPage) {
+
             Intent intent = new Intent(DrawerMainActivity.this, Abbreviations.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
 
             //introduction page link
         } else if (id == R.id.introPage) {
-            Intent intent = new Intent(DrawerMainActivity.this, Introduction.class);
+
+            DatabaseAccess dataAccess=DatabaseAccess.getInstance(getApplicationContext());
+            dataAccess.open();
+
+            String address = dataAccess.getContent(2);
+
+            //setting text to result field
+
+            result_address.setText(address);
+            result_address.setMovementMethod(new ScrollingMovementMethod());
+            dataAccess.close();
+        }else if(id == R.id.calendar){
+            Intent intent = new Intent(DrawerMainActivity.this, Calendar.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        }else if(id == R.id.notes){
+            Intent intent = new Intent(DrawerMainActivity.this, NoteTaking.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         }
