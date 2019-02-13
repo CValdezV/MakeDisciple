@@ -8,10 +8,20 @@ import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 
+import java.io.IOException;
+
+import edu.cwu.makedisciple.Database.DatabaseHelper;
+import edu.cwu.makedisciple.Database.TextContent;
+
 public class Introduction extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_introduction);
 
@@ -22,6 +32,8 @@ public class Introduction extends AppCompatActivity {
         ab.setDisplayHomeAsUpEnabled(true);
 
         //database call to get string
+
+
         String intro = getResources().getString(R.string.intro1);
         TextView tv = (TextView) findViewById(R.id.textView);
         tv.setText(Html.fromHtml(intro));
