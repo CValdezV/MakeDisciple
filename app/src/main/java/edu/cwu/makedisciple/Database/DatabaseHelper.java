@@ -1,9 +1,13 @@
 package edu.cwu.makedisciple.Database;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.database.CursorIndexOutOfBoundsException;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import org.w3c.dom.Text;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -15,6 +19,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     //Android's default system path for app's database
     private static String DB_PATH = "/data/data/edu.cwu.makedisciple.Database/databases/";
     private static String DB_NAME  ="bookContent";
+    private static String MAIN_TABLE = "bookContent";
     private SQLiteDatabase myDatabase;
     private final Context myContext;
     
@@ -83,6 +88,32 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             myDatabase.close();
         }
         super.close();
+    }
+
+
+    //returns an object of TextContent that will hold data of a specific row depending on the id
+    public TextContent getData(int id){
+        String [] columns = new String[]{"_id","section","title","content"};
+        String selectQuery = "SELECT * FROM "+MAIN_TABLE;
+        Cursor cursor = myDatabase.rawQuery(selectQuery,null);
+
+        TextContent content = new TextContent();
+        //loop to go through list until specific id is found
+        if(cursor.moveToFirst()){
+            do{
+                content.setId(Integer.parseInt(cursor.getString(0)));
+                content.setSection(cursor.getString(1));
+                content.setTitle(cursor.getString(2));
+                content.setContent(cursor.getString(3));
+
+            }while(id !=content.getId());
+        }
+
+
+
+        return content;
+
+
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
