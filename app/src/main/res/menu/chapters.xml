@@ -14,7 +14,7 @@
 
         <item
             android:id="@+id/calendar"
-            android:title="calendar"/>
+            android:title="Calendar"/>
         <item
             android:id="@+id/notes"
             android:title="Notes"/>
