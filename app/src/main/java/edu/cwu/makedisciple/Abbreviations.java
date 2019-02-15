@@ -13,7 +13,7 @@ public class Abbreviations extends AppCompatActivity {
         setContentView(R.layout.activity_abbreviations);
 
         //Toolbar setup
-        Toolbar bar = (Toolbar)findViewById(R.id.my_toolbar);
+        Toolbar bar = findViewById(R.id.my_toolbar);
         setSupportActionBar(bar);
         bar.setTitle("Abbreviations");
         //Actions on the Bar itself
