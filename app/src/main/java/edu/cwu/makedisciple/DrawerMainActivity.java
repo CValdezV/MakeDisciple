@@ -71,7 +71,7 @@ public class DrawerMainActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
-        if(id == R.id.menu_new_content_about) {
+        if(id == R.id.aboutAuthor) {
             // User chose the "Settings" item, show the app settings UI...
             Intent intent = new Intent(DrawerMainActivity.this, About.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
