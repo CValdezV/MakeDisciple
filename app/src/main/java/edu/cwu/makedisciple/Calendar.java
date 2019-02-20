@@ -18,20 +18,20 @@ public class Calendar extends AppCompatActivity {
         setContentView(R.layout.activity_calendar);
 
         //Toolbar setup
-        Toolbar bar = (Toolbar)findViewById(R.id.my_toolbar);
+        Toolbar bar = findViewById(R.id.my_toolbar);
         bar.setTitle("Evangelism Log");
         setSupportActionBar(bar);
         //Actions on the Bar itself
         ActionBar ab = getSupportActionBar();
 
         ab.setDisplayHomeAsUpEnabled(true);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText et = (EditText) findViewById(R.id.editDate);
-                EditText et2 = (EditText) findViewById(R.id.editAction);
-                EditText et3 = (EditText) findViewById(R.id.editComment);
+                EditText et = findViewById(R.id.editDate);
+                EditText et2 = findViewById(R.id.editAction);
+                EditText et3 = findViewById(R.id.editComment);
 
 
                 Snackbar.make(view, "\tSaved", Snackbar.LENGTH_SHORT)

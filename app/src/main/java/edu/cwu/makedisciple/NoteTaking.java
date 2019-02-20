@@ -17,7 +17,7 @@ public class NoteTaking extends AppCompatActivity {
         setContentView(R.layout.activity_note_taking);
 
         //ToolBar setup
-        Toolbar bar = (Toolbar) findViewById(R.id.my_toolbar);
+        Toolbar bar = findViewById(R.id.my_toolbar);
         bar.setTitle("Campus/Church Notes");
         setSupportActionBar(bar);
         //Actions on the Bar itself
@@ -25,15 +25,15 @@ public class NoteTaking extends AppCompatActivity {
 
         ab.setDisplayHomeAsUpEnabled(true);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText et = (EditText) findViewById(R.id.editText);
-                EditText et2 = (EditText) findViewById(R.id.editText2);
-                EditText et3 = (EditText) findViewById(R.id.editText4);
-                EditText et4 = (EditText) findViewById(R.id.editText5);
-                EditText et5 = (EditText) findViewById(R.id.editText6);
+                EditText et = findViewById(R.id.editText);
+                EditText et2 = findViewById(R.id.editText2);
+                EditText et3 = findViewById(R.id.editText4);
+                EditText et4 = findViewById(R.id.editText5);
+                EditText et5 = findViewById(R.id.editText6);
 
                 Snackbar.make(view, "\tSaved", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show();

@@ -13,7 +13,7 @@ public class About extends AppCompatActivity {
         setContentView(R.layout.about);
 
         //Toolbar setup
-        Toolbar bar = (Toolbar)findViewById(R.id.my_toolbar);
+        Toolbar bar = findViewById(R.id.my_toolbar);
         bar.setTitle("About");
         setSupportActionBar(bar);
 

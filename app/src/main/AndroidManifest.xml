@@ -9,42 +9,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".TableOfContents">
-
-        </activity>
         <activity
             android:name=".About"
-            android:parentActivityName=".TableOfContents">
+            android:parentActivityName=".DrawerMainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".TableOfContents" />
+                android:value=".DrawerMainActivity" />
         </activity>
         <activity
             android:name=".Calendar"
-            android:parentActivityName=".TableOfContents">
+            android:parentActivityName=".DrawerMainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".TableOfContents" />
+                android:value=".DrawerMainActivity" />
         </activity>
         <activity
             android:name=".NoteTaking"
-            android:parentActivityName=".TableOfContents">
+            android:parentActivityName=".DrawerMainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".TableOfContents" />
+                android:value=".DrawerMainActivity" />
         </activity>
         <activity
             android:name=".Abbreviations"
             android:parentActivityName=".DrawerMainActivity">
             <meta-data
                 android:name="anndroid.support.PARENT_ACTIVITY"
-                android:value=".DrawerMainActivity" />
-        </activity>
-        <activity
-            android:name=".Introduction"
-            android:parentActivityName=".DrawerMainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
                 android:value=".DrawerMainActivity" />
         </activity>
         <activity

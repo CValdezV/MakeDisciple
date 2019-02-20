@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/abbPage"
+            android:title="Abbreviations" />
+        <item
+            android:id="@+id/introPage"
+            android:title="Introduction" />
+        <item
+            android:id="@+id/whereToUse"
+            android:title="Where to Use this Book"/>
+        <item
+            android:id="@+id/gospelMessage"
+            android:title="The Gospel Message"/>
+        <item
+            android:id="@+id/liveYourLife"
+            android:title="How to Life your Life to"/>
+        <item
+            android:id="@+id/beingDisc"
+            android:title="Being a Disciple"/>
+        <item
+            android:id="@+id/mentorDirec"
+            android:title="Directions for Mentor Meetings"/>
+        <item
+            android:id="@+id/mentorTopics"
+            android:title="Suggested Mentor Meeting"/>
+        <item
+            android:id="@+id/goals"
+            android:title="Primary Goals"/>
+        <item
+            android:id="@+id/yourDisc"
+            android:title="Your Disciples"/>
+        <item
+            android:id="@+id/readingCheck"
+            android:title="Bible Reading Checklist"/>
+        <item
+            android:id="@+id/weekByWeek"
+            android:title="Week by Week Disciples"/>
+        <item
+            android:id="@+id/howToSOAPT"
+            android:title="How to do a SOAPT Bible"/>
+        <item
+            android:id="@+id/SOAPT"
+            android:title="SOAPT"/>
+        <item
+            android:id="@+id/startSOAPT"
+            android:title="Start Using SOAPT"/>
+        <item
+            android:id="@+id/prayerPage"
+            android:title="Prayer Page"/>
+        <item
+            android:id="@+id/evanLog"
+            android:title="Evangelism Log"/>
+        <item
+            android:id="@+id/addReading"
+            android:title="Additional Reading"/>
+        <item
+            android:id="@+id/journalPages"
+            android:title="Journal Pages"/>
+        <item
+            android:id="@+id/resHall"
+            android:title="Why Do Residence Hall Bi"/>
+        <item
+            android:id="@+id/startRes"
+            android:title="How To Start a Residence"/>
+        <item
+            android:id="@+id/useMat"
+            android:title="How To Use the Materials"/>
+        <item
+            android:id="@+id/leadStudy"
+            android:title="Leading Bible Studies"/>
+        <item
+            android:id="@+id/indexStudy"
+            android:title="Index of Bible Studies"/>
+        <item
+            android:id="@+id/termPlan"
+            android:title="Term Bible Study Plan"/>
+        <item
+            android:id="@+id/indexGoals"
+            android:title="Index of Primary Goals"/>
+        <item
+            android:id="@+id/indexGodTime"
+            android:title="Index of God Times"/>
+        <item
+            android:id="@+id/takeNotes"
+            android:title="Take Notes and Apply the"/>
+        <item
+            android:id="@+id/worshipGathering"
+            android:title="Weekly Campus Worship Gathering"/>
+        <item
+            android:id="@+id/localNotes"
+            android:title="Local Church Notes"/>
+        <item
+            android:id="@+id/acknowledgements"
+            android:title="Acknowledgements"/>
+
+        <item
+            android:id="@+id/calendar"
+            android:title="Calendar"/>
+        <item
+            android:id="@+id/notes"
+            android:title="Notes"/>
+
+    </group>
+
+</menu>
