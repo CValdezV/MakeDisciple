@@ -83,11 +83,18 @@ public class DrawerMainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
 
+    //navigation bar selection of items to display content on activity
 
     public boolean onNavigationItemSelected(MenuItem item) {
+
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-         result_address= findViewById(R.id.displayText);
+        result_address= findViewById(R.id.displayText);
+        String textdisplay ="";
+
+        //calling databaseAccess to open the database to pull information
+        DatabaseAccess dataAccess=DatabaseAccess.getInstance(getApplicationContext());
+        dataAccess.open();
 
             //abbreviations page link
         if (id == R.id.abbPage) {
@@ -99,26 +106,149 @@ public class DrawerMainActivity extends AppCompatActivity
             //introduction page link
         } else if (id == R.id.introPage) {
 
-            DatabaseAccess dataAccess=DatabaseAccess.getInstance(getApplicationContext());
-            dataAccess.open();
+            textdisplay  = dataAccess.getContent(2);
 
-            String address = dataAccess.getContent(2);
 
-            //setting text to result field
 
-            result_address.setText(address);
-            result_address.setMovementMethod(new ScrollingMovementMethod());
-            dataAccess.close();
-        }else if(id == R.id.calendar){
+
+
+        }else if(id == R.id.whereToUse){
+
+            textdisplay  = dataAccess.getContent(3);
+
+        }else if(id == R.id.gospelMessage){
+
+            textdisplay  = dataAccess.getContent(4);
+
+        }else if(id == R.id.liveYourLife){
+
+            textdisplay  = dataAccess.getContent(5);
+
+        }else if(id == R.id.beingDisc){
+
+            textdisplay  = dataAccess.getContent(6);
+
+        }else if(id == R.id.mentorDirec){
+
+            textdisplay  = dataAccess.getContent(7);
+
+        }else if(id == R.id.mentorTopics){
+
+            textdisplay  = dataAccess.getContent(8);
+
+        }else if(id == R.id.goals){
+
+            textdisplay  = dataAccess.getContent(9);
+
+        }else if(id == R.id.yourDisc){
+
+            textdisplay  = dataAccess.getContent(10);
+
+        }else if(id == R.id.readingCheck){
+            //this is where brads checklist needs to be put
+            //as an intent
+
+            textdisplay  = dataAccess.getContent(11);
+
+        }else if(id == R.id.weekByWeek){
+                //need to double check what is supposed
+                //to be here
+            textdisplay  = dataAccess.getContent(12);
+
+        }else if(id == R.id.howToSOAPT){
+
+            textdisplay  = dataAccess.getContent(13);
+
+        }else if(id == R.id.SOAPT){
+
+            textdisplay  = dataAccess.getContent(14);
+
+        }else if(id == R.id.startSOAPT){
+
+            textdisplay  = dataAccess.getContent(15);
+
+        }else if(id == R.id.prayerPage){
+
+            textdisplay  = dataAccess.getContent(16);
+
+        }else if(id == R.id.evanLog){
+                //this is the calendar portion
+            textdisplay  = dataAccess.getContent(17);
+
+        }else if(id == R.id.addReading){
+
+            textdisplay  = dataAccess.getContent(18);
+
+        }else if(id == R.id.journalPages){
+            //part of the note taking
+            //left here for now
+            textdisplay  = dataAccess.getContent(19);
+
+        }else if(id == R.id.resHall){
+
+            textdisplay  = dataAccess.getContent(20);
+
+        }else if(id == R.id.startRes){
+
+            textdisplay  = dataAccess.getContent(21);
+
+        }else if(id == R.id.useMat){
+
+            textdisplay  = dataAccess.getContent(22);
+
+        }else if(id == R.id.leadStudy){
+
+            textdisplay  = dataAccess.getContent(2);
+
+        }else if(id == R.id.indexStudy){
+
+            textdisplay  = dataAccess.getContent(2);
+
+        }else if(id == R.id.termPlan){
+
+            textdisplay  = dataAccess.getContent(23);
+
+        }else if(id == R.id.indexGoals){
+
+            textdisplay  = dataAccess.getContent(24);
+
+        }else if(id == R.id.indexGodTime){
+
+            textdisplay  = dataAccess.getContent(25);
+
+        }else if(id == R.id.takeNotes){
+
+            //note taking portion left here for now
+
+        }else if(id == R.id.worshipGathering){
+            //more for taking notes
+
+
+        }else if(id == R.id.localNotes){
+            //more note taking will remove later
+
+        }else if(id == R.id.acknowledgements){
+
+            textdisplay  = dataAccess.getContent(31);
+
+        }
+        //intent to calendar activity
+        else if(id == R.id.calendar){
             Intent intent = new Intent(DrawerMainActivity.this, Calendar.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
+
+            //intent to notes activity
         }else if(id == R.id.notes){
             Intent intent = new Intent(DrawerMainActivity.this, NoteTaking.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         }
 
+        result_address.setText(textdisplay);
+        result_address.setMovementMethod(new ScrollingMovementMethod());
+        //close the data accessor
+        dataAccess.close();
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
